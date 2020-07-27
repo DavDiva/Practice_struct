@@ -59,8 +59,8 @@ Customer luckyCustomer(Customer object)
 struct Advert//Practice 2
 {
 	int count;
-	int percent;
-	int price;
+	double percent;
+	double price;
 
 };
 
@@ -69,8 +69,7 @@ void printAdInfo(Advert object)
 	cout << "Count is " << object.count << endl;
 	cout << "Perscent is " << object.percent << endl;
 	cout << "Price is " << object.price << endl;
-	int total = object.count * object.percent / 100 * object.price;
-	cout << "You earned in total:" << total << endl;
+	cout << "You earned in total:" << object.count * object.percent / 100 * object.price << endl;
 }
 struct Fraction//Practice 3
 {
@@ -110,10 +109,12 @@ int main()
 	printAdInfo(advert1);
 
 	Fraction frac1;//Practice 3
+	cout << "Enter numerator and denominator" << endl;
 	cin >> frac1.numerator >> frac1.denumerator;
 	Fraction frac2;
+	cout << "Enter numerator and denominator" << endl;
 	cin >> frac2.numerator >> frac2.denumerator;
-	cout << mutiplyFractions(frac1, frac2);
+	cout <<"Product of numbers: "<< mutiplyFractions(frac1, frac2);
 
 	return 0;
 
